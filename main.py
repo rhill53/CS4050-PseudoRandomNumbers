@@ -1,11 +1,9 @@
-import random_word as rw
-import random_img as ri
 import img_noise as imn
 
-key = rw.get_word()
+max = input("Enter maximum random value: ")
 
-temp = ri.download_images(key)
+noise = imn.img_noise('image.jpg')
 
-noise = imn.img_noise(temp)
+rand = int(float(max) % noise)
 
-print(noise)
+print(rand)
